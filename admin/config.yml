@@ -2,6 +2,8 @@ backend:
   name: github
   repo: designstudiopond/website
   branch: main
+  base_url: https://pond-decap-oauth.vercel.app
+  auth_endpoint: auth
 
 media_folder: "uploads"
 public_folder: "/uploads"
