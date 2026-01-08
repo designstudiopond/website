@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: designstudiopond/website
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "summary", label: "Summary", widget: "text", required: false }
+      - { name: "cover", label: "Cover Image", widget: "image", required: false }
+      - { name: "body", label: "Body", widget: "markdown", required: false }
+
+  - name: "partners"
+    label: "Friends & Partners"
+    folder: "content/partners"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { name: "name", label: "Name", widget: "string" }
+      - { name: "note", label: "Note", widget: "text", required: false }
